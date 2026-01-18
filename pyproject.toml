@@ -121,6 +121,13 @@ rag = [
 # ------------ Evaluation ------------
 evaluate = ["ray"]
 
+# ------------ Platform ------------
+platform = [
+    "starlette",
+    "uvicorn",
+    "pyyaml",
+]
+
 # ------------ Full ------------
 full = [
     "agentscope[a2a]",
@@ -129,6 +136,7 @@ full = [
     "agentscope[memory]",
     "agentscope[rag]",
     "agentscope[evaluate]",
+    "agentscope[platform]",
 ]
 
 # ------------ Development ------------
@@ -154,6 +162,9 @@ dev = [
 Homepage = "https://github.com/agentscope-ai/agentscope"
 Documentation = "https://doc.agentscope.io/"
 Repository = "https://github.com/agentscope-ai/agentscope"
+
+[project.scripts]
+agentscope-pack = "agentscope.platform.pack:main"
 
 [tool.setuptools]
 packages = { find = { where = ["src"] } }

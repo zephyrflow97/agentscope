@@ -57,6 +57,7 @@ from . import pipeline
 from . import tracing
 from . import rag
 from . import a2a
+from . import platform
 
 from ._logging import (
     logger,
@@ -175,6 +176,7 @@ __all__ = [
     "tracing",
     "rag",
     "a2a",
+    "platform",
     # functions
     "init",
     "setup_logger",
