@@ -121,6 +121,14 @@ rag = [
 # ------------ Evaluation ------------
 evaluate = ["ray"]
 
+# ------------ Runtime ------------
+runtime = [
+    "fastapi",
+    "uvicorn",
+    "aiohttp",
+    "pyyaml",
+]
+
 # ------------ Full ------------
 full = [
     "agentscope[a2a]",
@@ -154,6 +162,9 @@ dev = [
 Homepage = "https://github.com/agentscope-ai/agentscope"
 Documentation = "https://doc.agentscope.io/"
 Repository = "https://github.com/agentscope-ai/agentscope"
+
+[project.scripts]
+agentscope = "agentscope.runtime._cli:main"
 
 [tool.setuptools]
 packages = { find = { where = ["src"] } }

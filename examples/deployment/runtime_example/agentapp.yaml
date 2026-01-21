@@ -1,0 +1,19 @@
+# AgentScope Runtime Configuration
+# This is a simple example configuration file
+
+# Model configurations
+models:
+  main:
+    provider: dashscope
+    model: qwen-max
+    api_key: ${DASHSCOPE_API_KEY}
+    stream: true
+
+# Session configuration
+session:
+  backend: json
+  save_dir: ./sessions
+
+# Server configuration
+server:
+  port: 8080
